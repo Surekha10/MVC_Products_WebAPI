@@ -1,0 +1,68 @@
+﻿@model MVC_Product_Assignment.Models.ProductModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Find</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div align="center">
+        <h4>ProductModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProductID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProductPrice)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductCategory)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ProductCategory)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductImageAddress)
+            </dt>
+    
+            <dd>
+                <img height="200px" width="250px" src=@Model.ProductImageAddress />
+            </dd>
+    
+        </dl>
+        @Html.ActionLink("Update", "Update", "Product", new { id = Model.ProductID }, null)
+     </div>
+</body>
+</html>
